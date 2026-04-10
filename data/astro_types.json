@@ -1,0 +1,17 @@
+{
+  "Arid":        { "metal": 2, "gas": 2, "crystals": 0, "fertility": 5, "area_planet": 95, "area_moon": 83 },
+  "Asteroid":    { "metal": 3, "gas": 1, "crystals": 2, "fertility": 4, "area_planet": 0,  "area_moon": 65 },
+  "Craters":     { "metal": 3, "gas": 1, "crystals": 1, "fertility": 4, "area_planet": 85, "area_moon": 75 },
+  "Crystalline": { "metal": 2, "gas": 1, "crystals": 3, "fertility": 4, "area_planet": 80, "area_moon": 71 },
+  "Earthly":     { "metal": 2, "gas": 2, "crystals": 0, "fertility": 6, "area_planet": 85, "area_moon": 75 },
+  "Gaia":        { "metal": 2, "gas": 2, "crystals": 0, "fertility": 6, "area_planet": 90, "area_moon": 79 },
+  "Glacial":     { "metal": 1, "gas": 2, "crystals": 0, "fertility": 5, "area_planet": 95, "area_moon": 83 },
+  "Magma":       { "metal": 2, "gas": 4, "crystals": 0, "fertility": 5, "area_planet": 80, "area_moon": 71 },
+  "Metallic":    { "metal": 3, "gas": 2, "crystals": 1, "fertility": 4, "area_planet": 85, "area_moon": 75 },
+  "Oceanic":     { "metal": 1, "gas": 2, "crystals": 0, "fertility": 6, "area_planet": 80, "area_moon": 71 },
+  "Radioactive": { "metal": 2, "gas": 3, "crystals": 0, "fertility": 4, "area_planet": 90, "area_moon": 79 },
+  "Rocky":       { "metal": 3, "gas": 2, "crystals": 0, "fertility": 5, "area_planet": 85, "area_moon": 75 },
+  "Toxic":       { "metal": 2, "gas": 4, "crystals": 0, "fertility": 4, "area_planet": 90, "area_moon": 79 },
+  "Tundra":      { "metal": 2, "gas": 2, "crystals": 0, "fertility": 5, "area_planet": 95, "area_moon": 83 },
+  "Volcanic":    { "metal": 2, "gas": 4, "crystals": 0, "fertility": 5, "area_planet": 80, "area_moon": 71 }
+}

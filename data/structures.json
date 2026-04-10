@@ -1,0 +1,279 @@
+{
+  "Urban Structures": {
+    "area": -1,
+    "energy": 0,
+    "population": 0,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "population_cap": "fertility",
+    "tech_modifiers": [],
+    "category": "support"
+  },
+
+  "Solar Plants": {
+    "area": -1,
+    "energy": "solar",
+    "population": 1,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": ["Energy"],
+    "category": "energy"
+  },
+
+  "Gas Plants": {
+    "area": -1,
+    "energy": "gas",
+    "population": 1,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": ["Energy"],
+    "category": "energy"
+  },
+
+  "Fusion Plants": {
+    "area": -1,
+    "energy": 4,
+    "population": 1,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": ["Energy"],
+    "category": "energy"
+  },
+
+  "Antimatter Plants": {
+    "area": -1,
+    "energy": 10,
+    "population": 1,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": ["Energy"],
+    "category": "energy"
+  },
+
+  "Orbital Plants": {
+    "area": 0,
+    "energy": 12,
+    "population": 1,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": ["Energy"],
+    "category": "energy"
+  },
+
+  "Research Labs": {
+    "area": -1,
+    "energy": -1,
+    "population": 1,
+    "economy": 0,
+    "production": 0,
+    "research": 6,
+    "tech_modifiers": ["AI"],
+    "category": "research"
+  },
+
+  "Metal Refineries": {
+    "area": -1,
+    "energy": -1,
+    "population": 1,
+    "economy": 1,
+    "production": "metal",
+    "research": 0,
+    "tech_modifiers": ["Cyber"],
+    "category": "production"
+  },
+
+  "Crystal Mines": {
+    "area": -1,
+    "energy": -1,
+    "population": 1,
+    "economy": "crystals",
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": [],
+    "category": "economy"
+  },
+
+  "Robotic Factories": {
+    "area": -1,
+    "energy": -1,
+    "population": 1,
+    "economy": 1,
+    "production": 2,
+    "research": 0,
+    "tech_modifiers": ["Cyber"],
+    "category": "production"
+  },
+
+  "Nanite Factories": {
+    "area": -1,
+    "energy": -2,
+    "population": 1,
+    "economy": 2,
+    "production": 4,
+    "research": 0,
+    "tech_modifiers": ["Cyber"],
+    "category": "production"
+  },
+
+  "Android Factories": {
+    "area": -1,
+    "energy": -4,
+    "population": 1,
+    "economy": 2,
+    "production": 6,
+    "research": 0,
+    "tech_modifiers": ["Cyber"],
+    "category": "production"
+  },
+
+  "Shipyards": {
+    "area": -1,
+    "energy": -1,
+    "population": 1,
+    "economy": 1,
+    "production": 2,
+    "research": 0,
+    "tech_modifiers": ["Cyber"],
+    "category": "production"
+  },
+
+  "Orbital Shipyards": {
+    "area": 0,
+    "energy": -12,
+    "population": 1,
+    "economy": 2,
+    "production": 8,
+    "research": 0,
+    "tech_modifiers": ["Cyber"],
+    "category": "production"
+  },
+
+  "Spaceports": {
+    "area": -1,
+    "energy": -1,
+    "population": 1,
+    "economy": 2,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": [],
+    "category": "economy"
+  },
+
+  "Economic Centers": {
+    "area": -1,
+    "energy": -2,
+    "population": 1,
+    "economy": 3,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": [],
+    "category": "economy"
+  },
+
+  "Command Centers": {
+    "area": -1,
+    "energy": -1,
+    "population": 1,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": [],
+    "category": "special"
+  },
+
+  "Terraform": {
+    "area": 5,
+    "energy": 0,
+    "population": 0,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": [],
+    "category": "support"
+  },
+
+  "Multi-Level Platforms": {
+    "area": 10,
+    "energy": 0,
+    "population": 0,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": [],
+    "category": "support"
+  },
+
+  "Orbital Base": {
+    "area": 0,
+    "energy": 0,
+    "population": 0,
+    "population_cap": 10,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": [],
+    "category": "support"
+  },
+
+  "Jump Gate": {
+    "area": 0,
+    "energy": -8,
+    "population": 1,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": [],
+    "category": "special"
+  },
+
+  "Biosphere Modification": {
+    "area": -1,
+    "energy": -24,
+    "population": 1,
+    "fertility": 1,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": [],
+    "category": "support"
+  },
+
+  "Capital": {
+    "area": -1,
+    "energy": -12,
+    "population": 1,
+    "economy": 10,
+    "production": 0,
+    "research": 0,
+    "tech_modifiers": [],
+    "category": "economy"
+  },
+
+  "Planetary Shield": {
+    "area": -1,
+    "energy": -16,
+    "population": 1,
+    "defense": 1024,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "category": "defense"
+  },
+
+  "Planetary Ring": {
+    "area": 0,
+    "energy": -24,
+    "population": 1,
+    "defense": 2048,
+    "economy": 0,
+    "production": 0,
+    "research": 0,
+    "category": "defense"
+  }
+}
