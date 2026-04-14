@@ -1,4 +1,5 @@
 import os
+
 if "CODESPACES" in os.environ:
     os.environ["QT_QPA_PLATFORM"] = "offscreen"
 
