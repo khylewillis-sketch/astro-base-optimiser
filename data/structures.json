@@ -10,6 +10,8 @@
     "research": 0,
     "population_cap": "fertility",
     "tech_modifiers": [],
+    "order": 1,
+    "support_axis": "population",
     "category": "support"
   },
 
@@ -23,6 +25,8 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": ["Energy"],
+    "order": 1,
+    "support_axis": "energy",
     "category": "energy"
   },
 
@@ -36,6 +40,8 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": ["Energy"],
+    "order": 2,
+    "support_axis": "energy",
     "category": "energy"
   },
 
@@ -49,6 +55,8 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": ["Energy"],
+    "order": 3,
+    "support_axis": "energy",
     "category": "energy"
   },
 
@@ -62,6 +70,8 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": ["Energy"],
+    "order": 4,
+    "support_axis": "energy",
     "category": "energy"
   },
 
@@ -75,6 +85,8 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": ["Energy"],
+    "order": 5,
+    "support_axis": "energy",
     "category": "energy"
   },
 
@@ -101,6 +113,7 @@
     "production": "metal",
     "research": 0,
     "tech_modifiers": ["Cyber"],
+    "order": 1,
     "category": "production"
   },
 
@@ -114,6 +127,7 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": [],
+    "order": 3,
     "category": "economy"
   },
 
@@ -127,6 +141,7 @@
     "production": 2,
     "research": 0,
     "tech_modifiers": ["Cyber"],
+    "order": 2,
     "category": "production"
   },
 
@@ -140,6 +155,7 @@
     "production": 4,
     "research": 0,
     "tech_modifiers": ["Cyber"],
+    "order": 3,
     "category": "production"
   },
 
@@ -153,6 +169,7 @@
     "production": 6,
     "research": 0,
     "tech_modifiers": ["Cyber"],
+    "order": 4,
     "category": "production"
   },
 
@@ -166,6 +183,7 @@
     "production": 2,
     "research": 0,
     "tech_modifiers": ["Cyber"],
+    "order": 5,
     "category": "production"
   },
 
@@ -179,6 +197,7 @@
     "production": 8,
     "research": 0,
     "tech_modifiers": ["Cyber"],
+    "order": 6,
     "category": "production"
   },
 
@@ -192,6 +211,7 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": [],
+    "order": 1,
     "category": "economy"
   },
 
@@ -205,6 +225,7 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": [],
+    "order": 2,
     "category": "economy"
   },
 
@@ -218,6 +239,7 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": [],
+    "order": 2,
     "category": "special"
   },
 
@@ -231,6 +253,7 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": [],
+    "support_axis": "area",
     "category": "support"
   },
 
@@ -244,6 +267,7 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": [],
+    "support_axis": "area",
     "category": "support"
   },
 
@@ -258,6 +282,8 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": [],
+    "order": 2,
+    "support_axis": "population",
     "category": "support"
   },
 
@@ -271,6 +297,7 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": [],
+    "order": 1,
     "category": "special"
   },
 
@@ -285,6 +312,8 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": [],
+    "order": 3,
+    "support_axis": "population",
     "category": "support"
   },
 
@@ -298,6 +327,7 @@
     "production": 0,
     "research": 0,
     "tech_modifiers": [],
+    "order": 2,
     "category": "economy"
   },
 
@@ -311,6 +341,7 @@
     "economy": 0,
     "production": 0,
     "research": 0,
+    "order": 2,
     "category": "defense"
   },
 
@@ -324,6 +355,7 @@
     "economy": 0,
     "production": 0,
     "research": 0,
+    "order": 3,
     "category": "defense"
   }
 }

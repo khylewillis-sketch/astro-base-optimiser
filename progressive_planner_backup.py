@@ -377,9 +377,4 @@ class ProgressiveBasePlanner:
                 "research": state.compute_research(),
                 "economy": state.compute_economy(),
             },
-            "constraints": {
-                "population": state.compute_population(),
-                "energy": state.compute_energy(),
-                "area": state.compute_area(),
-            }
         }
