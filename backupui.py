@@ -21,12 +21,22 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("Astro Empires Base Optimiser")
+st.title("🛰️ Astro Empires Base Optimiser")
+
+st.markdown(
+    """
+    Progressive build‑order planner for **Astro Empires**.
+
+    - Uses **marginal efficiency**
+    - Builds **support only when required**
+    - Handles **game mechanics** (e.g. Spaceport trade routes)
+    """
+)
 
 # ---------------------------------------------------------
 # SIDEBAR: GAME SETTINGS
 # ---------------------------------------------------------
-st.sidebar.header("Astro Base Type")
+st.sidebar.header("⚙️ Game Settings")
 
 astro_type = st.sidebar.selectbox(
     "Astro Type",
@@ -39,7 +49,7 @@ is_moon = st.sidebar.checkbox("Moon", value=True)
 position = st.sidebar.number_input(
     "Position",
     min_value=1,
-    max_value=6,
+    max_value=25,
     value=2,
 )
 
@@ -57,13 +67,13 @@ TECH_LEVELS = {
 }
 
 st.sidebar.divider()
-st.sidebar.subheader("Commander")
+st.sidebar.subheader("Commanders")
 
 construction_commander = st.sidebar.number_input(
     "Construction Commander",
     min_value=0,
     max_value=25,
-    value=0,
+    value=10,
 )
 
 production_commander = st.sidebar.number_input(
@@ -83,65 +93,46 @@ anti_gravity = st.sidebar.number_input(
 # ---------------------------------------------------------
 # TARGET STRUCTURES
 # ---------------------------------------------------------
-st.subheader("Target Structures")
+st.subheader("🏗️ Target Structures")
 
-TARGET_GROUPS = {
-    "Production / Construction": {
-        "Metal Refineries": 25,
-        "Robotic Factories": 20,
-        "Nanite Factories": 15,
-        "Android Factories": 10,
-        "Shipyards": 20,
-        "Orbital Shipyards": 5,
-    },
-    "Economy": {
-        "Spaceports": 30,
-        "Economic Centers": 20,
-    },
-    "Research": {
-        "Research Labs": 20,
-    },
-    "Defence": {
-        "Planetary Shield": 2,
-        "Planetary Ring": 4,
-    },
+default_targets = {
+    "Metal Refineries": 33,
+    "Robotic Factories": 28,
+    "Nanite Factories": 23,
+    "Android Factories": 21,
+    "Shipyards": 28,
+    "Orbital Shipyards": 14,
+    "Research Labs": 20,
+    "Spaceports": 30,
+    "Economic Centers": 20,
+    "Command Centers": 8,
+    "Planetary Shield": 2,
+    "Planetary Ring": 4,
 }
 
-STRUCTURE_TARGET = {}
+df_targets = pd.DataFrame(
+    list(default_targets.items()),
+    columns=["Structure", "Target Level"],
+)
 
-for group_name, structures in TARGET_GROUPS.items():
-    st.markdown(f"### {group_name}")
+edited_df = st.data_editor(
+    df_targets,
+    num_rows="fixed",
+    use_container_width=True,
+)
 
-    df = pd.DataFrame(
-        list(structures.items()),
-        columns=["Structure", "Target Level"],
-    )
-
-    edited = st.data_editor(
-        df,
-        num_rows="fixed",
-        use_container_width=True,
-        column_config={
-            "Structure": st.column_config.TextColumn(disabled=True),
-            "Target Level": st.column_config.NumberColumn(
-                min_value=0,
-                step=1,
-                format="%d",
-            ),
-        },
-        key=f"group_{group_name}",
-    )
-
-    for _, row in edited.iterrows():
-        if int(row["Target Level"]) > 0:
-            STRUCTURE_TARGET[row["Structure"]] = int(row["Target Level"])
+STRUCTURE_TARGET = {
+    row["Structure"]: int(row["Target Level"])
+    for _, row in edited_df.iterrows()
+    if int(row["Target Level"]) > 0
+}
 
 # ---------------------------------------------------------
 # RUN OPTIMISER
 # ---------------------------------------------------------
 st.divider()
 
-run = st.button("Run Optimiser", type="primary")
+run = st.button("🚀 Run Optimiser", type="primary")
 
 if run:
     with st.spinner("Optimising build order..."):
@@ -158,12 +149,12 @@ if run:
 
         result = planner.plan()
 
-    st.success("Optimisation complete")
+    st.success("Optimisation complete ✅")
 
     # -----------------------------------------------------
     # SUMMARY
     # -----------------------------------------------------
-    st.subheader("Summary")
+    st.subheader("📊 Summary")
 
     totals = result["totals"]
 
@@ -198,7 +189,7 @@ if run:
     # BUILD ORDER TABLE
     # -----------------------------------------------------
     st.divider()
-    st.subheader("Progressive Build Order")
+    st.subheader("📋 Progressive Build Order")
 
     rows = []
     for i, step in enumerate(result["steps"], start=1):
@@ -228,5 +219,12 @@ if run:
         column_config={
             "Cost (cr)": st.column_config.NumberColumn(format="%d"),
             "Build Time (days)": st.column_config.NumberColumn(format="%.2f"),
+            "Type": st.column_config.CategoricalColumn(
+                categories=["Target", "Support"],
+                colors={
+                    "Target": "blue",
+                    "Support": "orange",
+                },
+            ),
         },
     )
